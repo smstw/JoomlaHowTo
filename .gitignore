@@ -1,0 +1,24 @@
+### Joomla ###
+/.htaccess
+/administrator/cache/*
+!/administrator/cache/index.html
+/cache/*
+!/cache/index.html
+/installation*
+/log/*
+!/log/index.html
+/logs/*
+!/logs/index.html
+/tmp/*
+!/tmp/index.html
+/configuration.php
+/robots.txt
+
+### Joomla JConsole ###
+/cli/jconsole/cache/*
+!/cli/jconsole/cache/index.html
+/cli/jconsole/logs/*
+!/cli/jconsole/logs/index.html
+
+### IDE ###
+/.*/
