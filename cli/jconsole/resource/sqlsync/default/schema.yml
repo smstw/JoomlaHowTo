@@ -1529,8 +1529,6 @@
         - { Table: '#__template_styles', Non_unique: '1', Key_name: idx_template, Seq_in_index: '1', Column_name: template, Sub_part: null, 'Null': '', Comment: '', Index_comment: '' }
         - { Table: '#__template_styles', Non_unique: '1', Key_name: idx_home, Seq_in_index: '1', Column_name: home, Sub_part: null, 'Null': '', Comment: '', Index_comment: '' }
     data:
-        - ['4', beez3, '0', '0', 'Beez3 - Default', '{"wrapperSmall":"53","wrapperLarge":"72","logo":"images\/joomla_black.gif","sitetitle":"Joomla!","sitedescription":"Open Source Content Management","navposition":"left","templatecolor":"personal","html5":"0"}']
-        - ['5', hathor, '1', '0', 'Hathor - Default', '{"showSiteName":"0","colourChoice":"","boldText":"0"}']
         - ['7', protostar, '0', '1', 'protostar - Default', '{"templateColor":"","logoFile":"","googleFont":"1","googleFontName":"Open+Sans","fluidContainer":"0"}']
         - ['8', isis, '1', '1', 'isis - Default', '{"templateColor":"","logoFile":""}']
 '#__ucm_base':
