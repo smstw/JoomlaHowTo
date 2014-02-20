@@ -166,6 +166,20 @@
         - { Table: '#__banners', Non_unique: '1', Key_name: idx_metakey_prefix, Seq_in_index: '1', Column_name: metakey_prefix, Sub_part: null, 'Null': '', Comment: '', Index_comment: '' }
         - { Table: '#__banners', Non_unique: '1', Key_name: idx_banner_catid, Seq_in_index: '1', Column_name: catid, Sub_part: null, 'Null': '', Comment: '', Index_comment: '' }
         - { Table: '#__banners', Non_unique: '1', Key_name: idx_language, Seq_in_index: '1', Column_name: language, Sub_part: null, 'Null': '', Comment: '', Index_comment: '' }
+'#__blog_items':
+    name: '#__blog_items'
+    from:
+        - '#__blog_items'
+    columns:
+        id: { Field: id, Type: 'int(10) unsigned', 'Null': NO, Default: null, Extra: auto_increment, Comment: '', From: [id] }
+        title: { Field: title, Type: varchar(256), 'Null': NO, Default: null, Extra: '', Comment: '', From: [title] }
+        content: { Field: content, Type: text, 'Null': NO, Default: null, Extra: '', Comment: '', From: [content] }
+        created: { Field: created, Type: datetime, 'Null': NO, Default: null, Extra: '', Comment: '', From: [created] }
+        created_by: { Field: created_by, Type: int(11), 'Null': NO, Default: null, Extra: '', Comment: '', From: [created_by] }
+        modified: { Field: modified, Type: datetime, 'Null': NO, Default: null, Extra: '', Comment: '', From: [modified] }
+        modified_by: { Field: modified_by, Type: int(11), 'Null': NO, Default: null, Extra: '', Comment: '', From: [modified_by] }
+    index:
+        - { Table: '#__blog_items', Non_unique: '0', Key_name: PRIMARY, Seq_in_index: '1', Column_name: id, Sub_part: null, 'Null': '', Comment: '', Index_comment: '' }
 '#__categories':
     name: '#__categories'
     from:

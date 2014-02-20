@@ -1,4 +1,5 @@
 table:
+    '#__blog_items': all
     '#__assets': all
     '#__associations': all
     '#__banner_clients': all
