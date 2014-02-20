@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="component" version="3.1" method="upgrade">
+	<name>com_blog</name>
+	<author>SMS Taiwan</author>
+	<creationDate>February 2014</creationDate>
+	<version>0.1.0</version>
+	<description>COM_BLOG_XML_DESCRIPTION</description>
+	<administration>
+		<menu>com_blog</menu>
+	</administration>
+</extension>
