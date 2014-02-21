@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+    <fieldset name="basic">
+        <field name="id"
+               type="hidden"
+               label="id"
+               description="Item id"
+               default="0"
+               readonly="true"
+               class="readonly" />
+
+        <field name="title"
+               type="text"
+               label="Title"
+               description="Item title"
+               required="true" />
+
+        <field name="content"
+               type="editor"
+               label="Content"
+               description="Item content"
+               required="true" />
+
+        <field name="created"
+               type="calendar"
+               label="Created at"
+               description="Item created datetime"
+               class="inputbox"
+               size="22"
+               format="%Y-%m-%d %H:%M:%S"
+               filter="user_utc" />
+
+        <field name="created_by"
+               type="user"
+               label="Created by"
+               description="The user id who created the item" />
+
+        <field name="modified"
+               type="calendar"
+               class="readonly"
+               label="Modified at"
+               description="Item modified datetime"
+               size="22"
+               readonly="true"
+               format="%Y-%m-%d %H:%M:%S"
+               filter="user_utc" />
+
+        <field name="modified_by"
+               type="user"
+               label="Modified by"
+               description="The user id who modified the item"
+               class="readonly"
+               readonly="true"
+               filter="unset" />
+    </fieldset>
+</form>
