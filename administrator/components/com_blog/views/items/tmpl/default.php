@@ -9,6 +9,9 @@
 	<table class="table table-bordered">
 		<thead>
 			<tr>
+				<th width="1%">
+					<?php echo JHtml::_('grid.checkall'); ?>
+				</th>
 				<th>
 					Title
 				</th>
@@ -20,6 +23,9 @@
 		<tbody>
 		<?php foreach ($this->items as $i => $item): ?>
 			<tr>
+				<td>
+					<?php echo JHtml::_('grid.id', $i, $item->id); ?>
+				</td>
 				<td>
 					<a href="<?php echo JRoute::_('index.php?option=com_blog&task=item.edit&id=' . $item->id); ?>">
 						<?php echo $this->escape($item->title); ?>
@@ -35,5 +41,6 @@
 
 	<input type="hidden" name="option" value="com_blog"/>
 	<input type="hidden" name="task" value=""/>
+	<input type="hidden" name="boxchecked" value="0" />
 	<?php echo JHtml::_('form.token'); ?>
 </form>

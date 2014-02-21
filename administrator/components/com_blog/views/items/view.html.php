@@ -36,5 +36,7 @@ class BlogViewItems extends JViewLegacy
 		JToolbarHelper::title('Blog item list');
 
 		JToolbarHelper::addNew('item.add');
+		JToolbarHelper::editList('item.edit');
+		JToolbarHelper::deleteList('Are you sure?', 'items.delete');
 	}
 }
