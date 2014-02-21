@@ -1,5 +1,7 @@
 <?php
 
+$orderCol = $this->state->get('list.ordering');
+$orderDir = $this->state->get('list.direction');
 ?>
 
 <form action="<?php echo JRoute::_('index.php'); ?>"
@@ -20,10 +22,10 @@
 					<?php echo JHtml::_('grid.checkall'); ?>
 				</th>
 				<th>
-					Title
+					<?php echo JHtml::_('grid.sort', 'Title', 'a.title', $orderDir, $orderCol); ?>
 				</th>
 				<th>
-					Id
+					<?php echo JHtml::_('grid.sort', 'Id', 'a.id', $orderDir, $orderCol); ?>
 				</th>
 			</tr>
 		</thead>
@@ -56,5 +58,7 @@
 	<input type="hidden" name="option" value="com_blog"/>
 	<input type="hidden" name="task" value=""/>
 	<input type="hidden" name="boxchecked" value="0" />
+	<input type="hidden" name="filter_order" value="<?php echo $orderCol; ?>" />
+	<input type="hidden" name="filter_order_Dir" value="<?php echo $orderDir; ?>" />
 	<?php echo JHtml::_('form.token'); ?>
 </form>
