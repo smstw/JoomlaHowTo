@@ -27,6 +27,23 @@ class BlogViewItem extends JViewLegacy
 		$this->form = $this->get('Form');
 		$this->item = $this->get('Item');
 
+		$this->setToolBar();
+
 		return parent::display($tpl);
+	}
+
+	/**
+	 * Setup page title and toolbar.
+	 *
+	 * @return void
+	 */
+	public function setToolBar()
+	{
+		JToolbarHelper::title('Edit blog item');
+
+		JToolbarHelper::apply('item.apply');
+		JToolbarHelper::save('item.save');
+		JToolbarHelper::save2new('item.save2new');
+		JToolbarHelper::cancel('item.cancel');
 	}
 }
