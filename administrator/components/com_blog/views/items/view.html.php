@@ -11,6 +11,11 @@ class BlogViewItems extends JViewLegacy
 	protected $items = array();
 
 	/**
+	 * @var JPagination
+	 */
+	protected $pagination;
+
+	/**
 	 * Execute and display a template script.
 	 *
 	 * @param string $tpl The name of the template file to parse; automatically searches through the template paths.
@@ -20,6 +25,7 @@ class BlogViewItems extends JViewLegacy
 	public function display($tpl = null)
 	{
 		$this->items = $this->get('Items');
+		$this->pagination = $this->get('Pagination');
 
 		$this->setToolBar();
 

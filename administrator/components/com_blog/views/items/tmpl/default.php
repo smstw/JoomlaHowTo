@@ -6,6 +6,13 @@
       method="post"
       name="adminForm"
       id="adminForm">
+	<div>
+		<div class="pull-right">
+			<?php echo $this->pagination->getLimitBox(); ?>
+		</div>
+		<div class="clearfix"></div>
+	</div>
+
 	<table class="table table-bordered">
 		<thead>
 			<tr>
@@ -20,6 +27,13 @@
 				</th>
 			</tr>
 		</thead>
+		<tfoot>
+			<tr>
+				<td colspan="3">
+					<?php echo $this->pagination->getListFooter(); ?>
+				</td>
+			</tr>
+		</tfoot>
 		<tbody>
 		<?php foreach ($this->items as $i => $item): ?>
 			<tr>
