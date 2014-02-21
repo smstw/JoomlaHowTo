@@ -1,5 +1,6 @@
 <?php
 
+$filterSearch = $this->state->get('filter.search');
 $orderCol = $this->state->get('list.ordering');
 $orderDir = $this->state->get('list.direction');
 ?>
@@ -9,6 +10,21 @@ $orderDir = $this->state->get('list.direction');
       name="adminForm"
       id="adminForm">
 	<div>
+		<div class="pull-left">
+			<div class="btn-group">
+				<input type="text" value="<?php echo $filterSearch; ?>" name="filter_search"
+				       placeholder="<?php echo JText::_('JSEARCH_FILTER'); ?>" />
+			</div>
+
+			<div class="input-prepend input-append">
+				<button type="submit" class="btn hasTooltip" title="<?php echo JHtml::tooltipText('JSEARCH_FILTER_SUBMIT'); ?>">
+					<i class="icon-search"></i>
+				</button>
+				<button id="btn-clear-filters" type="button" class="btn hasTooltip" title="<?php echo JHtml::tooltipText('JSEARCH_FILTER_CLEAR'); ?>">
+					<i class="icon-remove"></i>
+				</button>
+			</div>
+		</div>
 		<div class="pull-right">
 			<?php echo $this->pagination->getLimitBox(); ?>
 		</div>
@@ -62,3 +78,15 @@ $orderDir = $this->state->get('list.direction');
 	<input type="hidden" name="filter_order_Dir" value="<?php echo $orderDir; ?>" />
 	<?php echo JHtml::_('form.token'); ?>
 </form>
+
+<script type="text/javascript">
+	(function ($) {
+		$(document).ready(function () {
+			$('#btn-clear-filters').click(function () {
+				$('input[name="filter_search"]').val('');
+
+				this.form.submit();
+			});
+		});
+	})(jQuery);
+</script>
