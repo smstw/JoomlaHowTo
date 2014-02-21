@@ -21,6 +21,20 @@ class BlogViewItems extends JViewLegacy
 	{
 		$this->items = $this->get('Items');
 
+		$this->setToolBar();
+
 		return parent::display($tpl);
+	}
+
+	/**
+	 * Setup page title and toolbar.
+	 *
+	 * @return void
+	 */
+	public function setToolBar()
+	{
+		JToolbarHelper::title('Blog item list');
+
+		JToolbarHelper::addNew('item.add');
 	}
 }
