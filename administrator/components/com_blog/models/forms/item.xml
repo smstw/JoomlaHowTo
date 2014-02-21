@@ -19,7 +19,8 @@
                type="editor"
                label="Content"
                description="Item content"
-               required="true" />
+               required="true"
+               filter="JComponentHelper::filterText" />
 
         <field name="created"
                type="calendar"
