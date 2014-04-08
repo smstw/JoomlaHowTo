@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="component" version="3.1" method="upgrade">
+	<name>com_flower</name>
+	<author>SMS Taiwan</author>
+	<creationDate>April 2014</creationDate>
+	<version>1.0.0</version>
+	<description>COM_FLOWER_XML_DESCRIPTION</description>
+	<administration>
+		<menu>com_flower</menu>
+	</administration>
+</extension>
