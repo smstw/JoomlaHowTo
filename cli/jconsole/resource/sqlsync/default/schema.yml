@@ -871,6 +871,19 @@
         - { Table: '#__redirect_links', Non_unique: '0', Key_name: PRIMARY, Seq_in_index: '1', Column_name: id, Sub_part: null, 'Null': '', Comment: '', Index_comment: '' }
         - { Table: '#__redirect_links', Non_unique: '0', Key_name: idx_link_old, Seq_in_index: '1', Column_name: old_url, Sub_part: null, 'Null': '', Comment: '', Index_comment: '' }
         - { Table: '#__redirect_links', Non_unique: '1', Key_name: idx_link_modifed, Seq_in_index: '1', Column_name: modified_date, Sub_part: null, 'Null': '', Comment: '', Index_comment: '' }
+'#__sakuras':
+    name: '#__sakuras'
+    from:
+        - '#__sakuras'
+    columns:
+        id: { Field: id, Type: 'int(10) unsigned', 'Null': NO, Default: null, Extra: auto_increment, Comment: '', From: [id] }
+        title: { Field: title, Type: char(128), 'Null': NO, Default: null, Extra: '', Comment: '', From: [title] }
+        description: { Field: description, Type: text, 'Null': YES, Default: null, Extra: '', Comment: '', From: [description] }
+        location: { Field: location, Type: char(128), 'Null': YES, Default: null, Extra: '', Comment: '', From: [location] }
+        blossom: { Field: blossom, Type: tinyint(1), 'Null': YES, Default: null, Extra: '', Comment: '', From: [blossom] }
+        event: { Field: event, Type: 'set(''Karaoke'',''Hanabi'',''Matsuri'',''Nomikai'')', 'Null': YES, Default: null, Extra: '', Comment: '', From: [event] }
+    index:
+        - { Table: '#__sakuras', Non_unique: '0', Key_name: PRIMARY, Seq_in_index: '1', Column_name: id, Sub_part: null, 'Null': '', Comment: '', Index_comment: '' }
 '#__schemas':
     name: '#__schemas'
     from:
