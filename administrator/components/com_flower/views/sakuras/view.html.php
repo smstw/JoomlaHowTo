@@ -11,6 +11,16 @@ class FlowerViewSakuras extends JViewLegacy
 	protected $items = array();
 
 	/**
+	 * @var JPagination
+	 */
+	protected $pagination;
+
+	/**
+	 * @var JObject
+	 */
+	protected $state;
+
+	/**
 	 * Execute and display a template script.
 	 *
 	 * @param   string  $tpl  The name of the template file to parse; automatically searches through the template paths.
@@ -20,6 +30,8 @@ class FlowerViewSakuras extends JViewLegacy
 	public function display($tpl = null)
 	{
 		$this->items = $this->get('Items');
+		$this->pagination = $this->get('Pagination');
+		$this->state = $this->get('State');
 
 		$this->setToolBar();
 
@@ -29,12 +41,14 @@ class FlowerViewSakuras extends JViewLegacy
 	/**
 	 * Setup page title and toolbar.
 	 *
-	 * @return void
+	 * @return  void
 	 */
 	public function setToolBar()
 	{
 		JToolbarHelper::title('Sakura list');
 
 		JToolbarHelper::addNew('sakura.add');
+		JToolbarHelper::editList('sakura.edit');
+		JToolbarHelper::deleteList('Are you sure?', 'sakuras.delete');
 	}
 }
