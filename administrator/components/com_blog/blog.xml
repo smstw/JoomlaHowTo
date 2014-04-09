@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="component" version="1" method="upgrade">
+	<name>com_blog</name>
+	<administration>
+		<menu>com_blog</menu>
+	</administration>
+</extension>
