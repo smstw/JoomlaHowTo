@@ -23,6 +23,7 @@
 			type="list"
 			label="Location"
 			description="Sakura location">
+			<option value="">-- Select Location --</option>
 			<option value="Tokyo">Tokyo</option>
 			<option value="Osaka">Osaka</option>
 			<option value="Kyoto">Kyoto</option>
@@ -31,11 +32,16 @@
 			type="radio"
 			class="btn-group btn-group-yesno"
 			label="Blossom"
-			description="If sakura blossom or not" />
+			description="If sakura blossom or not"
+			default="0">
+			<option value="1">Yes</option>
+			<option value="0">No</option>
+		</field>
 		<field name="event"
 			type="list"
 			label="Event"
 			description="Sakura events">
+			<option value="">-- Select Event --</option>
 			<option value="Karaoke">Karaoke</option>
 			<option value="Hanabi">Hanabi</option>
 			<option value="Matsuri">Matsuri</option>
