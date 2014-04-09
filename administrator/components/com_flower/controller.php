@@ -7,5 +7,10 @@ defined('_JEXEC') or die;
  */
 class FlowerController extends JControllerLegacy
 {
+	/**
+	 * The default view for the display method.
+	 *
+	 * @var string
+	 */
 	protected $default_view = 'sakuras';
 }
