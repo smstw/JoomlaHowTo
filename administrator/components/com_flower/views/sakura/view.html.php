@@ -6,8 +6,8 @@
 class FlowerViewSakura extends JViewLegacy
 {
 	/**
-	* @var JForm
-	*/
+	 * @var JForm
+	 */
 	protected $form;
 
 	/**
